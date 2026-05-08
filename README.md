@@ -1,124 +1,57 @@
-# Sistema de Gestión de Citas Médicas
+# 📊 Fruver Fresh - Sistema de Facturación y Gestión
 
-Un sistema web desarrollado en Python con Flask para la gestión y administración de citas médicas.
+**Fruver Fresh** es una aplicación web diseñada para optimizar la operación de negocios de venta de frutas y verduras (fruvers). Permite gestionar ventas, clientes, inventarios y ofrece integración visual para periféricos como balanzas digitales e impresoras térmicas.
 
-## Características
+## 🚀 Características Principales
 
-- Autenticación de usuarios
-- Gestión de citas médicas
-- Búsqueda y filtrado de registros
-- Panel de control con gráficos
-- Gestión de pacientes
-- Sistema de actualización de datos
+*   **Autenticación de Usuarios:** Sistema de inicio de sesión seguro para el personal administrativo.
+*   **Dashboard en Tiempo Real:** Visualización rápida de facturas generadas, total de ventas del día, cantidad de clientes y productos registrados.
+*   **Módulo de Facturación:**
+    *   Creación de facturas con cálculo automático de totales e impuestos.
+    *   Agregado rápido de productos populares.
+    *   Sugerencias dinámicas desde la base de datos de la bodega.
+    *   Aplicación de descuentos porcentuales.
+*   **Gestión de Clientes (CRM):** Registro y administración de hasta 2000 clientes con datos de contacto y NIT.
+*   **Bodega e Inventario:**
+    *   Control de precios por Kilo y Libra.
+    *   Exportación de inventario completo a formato **PDF**.
+*   **Historial de Ventas:** Registro detallado de todas las transacciones realizadas.
+*   **Integración de Hardware:**
+    *   Interfaz para configuración de balanzas digitales mediante puerto serial.
+    *   Configuración de impresoras térmicas y vista previa de tickets.
 
-## Requisitos Previos
+## 🛠️ Tecnologías Utilizadas
 
-- Python 3.8+
-- MySQL
-- pip (gestor de paquetes de Python)
+*   **Frontend:** HTML5, CSS3 (Diseño responsivo y moderno).
+*   **Lógica:** JavaScript Vanilla (ES6+).
+*   **Persistencia:** `localStorage` y `sessionStorage` para datos locales.
+*   **Librerías Externas:**
+    *   jsPDF: Generación de documentos PDF.
+    *   jsPDF-AutoTable: Tablas automáticas en los reportes PDF.
 
-## Instalación
+## 💻 Instalación y Uso
 
-### 1. Clonar el repositorio
+1.  Clona o descarga este repositorio.
+2.  Abre el archivo `index.html` en cualquier navegador web moderno.
+3.  **Credenciales de acceso predeterminadas:**
+    *   **Usuario:** `admin`
+    *   **Contraseña:** `1234`
 
-```bash
-git clone <URL_DEL_REPOSITORIO>
-cd GestionCitasMedicasREAL/sistemaplana
-```
+## 📂 Estructura del Proyecto
 
-### 2. Crear un entorno virtual
-
-```bash
-# En Windows
-python -m venv venv
-venv\Scripts\activate.bat
-
-# En macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Instalar las dependencias
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Configurar la base de datos
-
-- Crear una base de datos MySQL
-- Configurar las credenciales en `src/bd.py`
-
-### 5. Ejecutar la aplicación
-
-```bash
-cd src
-python app.py
-```
-
-La aplicación estará disponible en `http://localhost:5000`
-
-## Credenciales de Prueba
-
-- **Usuario:** 123
-- **Contraseña:** 123
-
-## Estructura del Proyecto
-
-```
-sistemaplana/
+```text
+fruver/
+├── index.html          # Estructura principal y pantallas del SPA
+├── manifest.json       # Configuración para PWA
 ├── src/
-│   ├── app.py                 # Aplicación principal
-│   ├── bd.py                  # Configuración de base de datos
-│   ├── Model/                 # Modelos de datos
-│   ├── rutas/                 # Rutas y controladores
-│   ├── templates/             # Plantillas HTML
-│   └── static/                # Archivos estáticos (CSS, JS, imágenes)
-├── requirements.txt           # Dependencias del proyecto
-└── Requerimientos.txt        # Instrucciones de configuración
+│   ├── styles.css      # Estilos visuales
+│   └── app.js          # Lógica de negocio y manejo del DOM
+└── README.md           # Documentación del proyecto
 ```
 
-## Tecnologías Utilizadas
+## ⚖️ Licencia
 
-- **Backend:** Flask
-- **Base de Datos:** MySQL
-- **Frontend:** HTML, CSS, JavaScript
-- **ORM:** SQLAlchemy
-- **Validación:** Marshmallow
-
-## Dependencias Principales
-
-- Flask 2.3.2
-- Flask-SQLAlchemy 3.0.3
-- PyMySQL 1.0.3
-- Flask-APScheduler 1.12.4
-- Marshmallow 3.19.0
-
-## Desarrollo
-
-### Estructura de Carpetas
-
-- `Model/` - Contiene los modelos de datos (plana.py, registro.py, validar.py)
-- `rutas/` - Contiene los controladores (home.py, formulario.py, buscador.py, etc.)
-- `static/` - Archivos CSS, JavaScript e imágenes
-- `templates/` - Plantillas HTML
-
-### Rutas Principales
-
-- `/` - Inicio de sesión
-- `/home` - Panel de control
-- `/formulario` - Formulario de registro
-- `/buscador` - Búsqueda de citas
-- `/grafico` - Panel de gráficos
-
-## Licencia
-
-Este proyecto es de uso interno.
-
-## Autor
-
-Desarrollado por el equipo de desarrollo.
+Este proyecto es de uso privado para **Fruver Fresh**.
 
 ---
-
-Para más información, consultar la documentación en la carpeta `Documentacion Del Proyecto/`
+*Desarrollado para optimizar el campo y el comercio local.*
